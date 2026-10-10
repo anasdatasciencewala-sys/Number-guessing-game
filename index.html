@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Number Guessing Game</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #071426;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game {
+    width: 100%;
+    max-width: 420px;
+    background: #10243d;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 30px #00c8ff30;
+}
+
+h1 {
+    color: #00d5ff;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #c4d5e8;
+    margin: 12px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+
+.stat {
+    background: #1b3553;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.stat h2 {
+    color: #00d5ff;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #00d5ff;
+    border-radius: 10px;
+    background: #071426;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    margin: 12px 0;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #00d5ff;
+    color: #071426;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #65e7ff;
+}
+
+#message {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#history {
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.winner {
+    color: #5dff9b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="game">
+    <h1>🤖 AI Guessing Game</h1>
+
+    <p>AI ne 1 se 100 ke darmiyan
+       ek number socha hai!</p>
+
+    <div class="stats">
+        <div class="stat">
+            <p>Attempts</p>
+            <h2 id="attempts">0</h2>
+        </div>
+
+        <div class="stat">
+            <p>Range</p>
+            <h2>1–100</h2>
+        </div>
+    </div>
+
+    <input
+        type="number"
+        id="guess"
+        min="1"
+        max="100"
+        placeholder="Enter your guess"
+    >
+
+    <button id="guessBtn" onclick="checkGuess()">
+        Guess Number
+    </button>
+
+    <div id="message">
+        🎯 Make your first guess!
+    </div>
+
+    <div id="history"></div>
+
+    <button id="restartBtn"
+        onclick="restartGame()" hidden>
+        Play Again
+    </button>
+</div>
+
+
+
+
+</body>
+<script src="./app.js"></script>
+</html>
