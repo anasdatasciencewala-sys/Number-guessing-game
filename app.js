@@ -13,7 +13,7 @@ function startGame() {
     document.getElementById("guessBtn").hidden = false;
     document.getElementById("restartBtn").hidden = true;
     document.getElementById("message").textContent =
-        "🎯 Make your first guess!";
+        " Make your first guess!";
     document.getElementById("message").className = "";
     document.getElementById("history").innerHTML = "";
 }
@@ -93,3 +93,5 @@ document.getElementById("guess").addEventListener(
 );
 
 startGame();
+
+
